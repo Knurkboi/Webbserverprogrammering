@@ -13,7 +13,7 @@
         <script>
 
         function alertClick() {
-            alert("ayyyyLMAO");
+            alert("bigEmon");
         }
 
         function picHover(x) {
@@ -30,8 +30,8 @@
 
         </script>
 
-        <div id="eksde">
-            <img onmouseover="picHover(this)" onmouseout="picNoHover(this)" src="084.png">
+        <div id="oof">
+            <img onmouseover="picHover(this)" onmouseout="picNoHover(this)" src="emon.jpg">
         </div>
 
     </body>
