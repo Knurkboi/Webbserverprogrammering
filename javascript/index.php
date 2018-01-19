@@ -18,7 +18,7 @@
         
     </head>
 
-    <body>
+    <body id="body">
 
         <button id="alertBtn" type="button" onclick="alertClick()">Alert</button>
 
@@ -47,7 +47,10 @@
             }
         }
 
-
+        function bgColorChange() {
+            var x = document.getElementById("body");
+            x.style.backgroundColor = "pink";
+        }
 
         </script>
 
@@ -60,6 +63,12 @@
         <div id="toggleImgBtn">
                 
             <button id="bildBtn" type="button" onclick="picToggle(this)">bigBenizBoiz</button>
+            
+        </div>
+        
+        <div id="bgColorBtn">
+                
+            <button id="colorBtn" type="button" onclick="bgColorChange(this)">bigShaq</button>
             
         </div>
 
