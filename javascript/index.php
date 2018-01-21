@@ -58,7 +58,13 @@
                 display: block;
                 margin-left: 5px;
                 border: 1px solid black;
-                padding: 10px 10px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            #btn6 {
+                width: 25px;
+                height: 25px;
             }
             
             #uppgift7 {
@@ -66,6 +72,14 @@
                 margin-left: 5px;
                 border: 1px solid black;
                 padding: 10px 10px;
+            }
+            
+            #uppgift8 {
+                display: block;
+                margin-left: 5px;
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
             }
             
         </style>
@@ -159,6 +173,34 @@
             updateValue();
         }    
             
+        function topLeft() {
+            var x = document.getElementById("uppgift8");
+            x.style.position = "absolute";
+            x.style.left = "0";
+            x.style.top = "0";
+        }    
+            
+        function topRight() {
+            var x = document.getElementById("uppgift8");
+            x.style.position = "absolute";
+            x.style.right = "0";
+            x.style.top = "0";
+        }
+            
+        function topLeft() {
+            var x = document.getElementById("uppgift8");
+            x.style.position = "absolute";
+            x.style.left = "0";
+            x.style.bottom = "0";
+        }
+            
+        function topLeft() {
+            var x = document.getElementById("uppgift8");
+            x.style.position = "absolute";
+            x.style.right = "0";
+            x.style.bottom = "0";
+        }    
+            
         </script>
 
         <div id="text"><h1>STOR ENAK LITEN beniz</h1></div>
@@ -193,7 +235,7 @@
             
             <div id="uppgift6" style="background-color: red;">
             
-                <button id="btn6" type="button" onclick="uppgift6()">Uppgift 6</button>
+                <button id="btn6" type="button" onclick="uppgift6()">6</button>
                 
             </div>
             
@@ -205,6 +247,15 @@
                 <button onClick="increaseBy(10)">+10</button>
                 <button onClick="increaseBy(100)">+100</button>
                 <button onClick="resetValue()">Reset</button>
+            
+            </div>
+            
+            <div id="uppgift8">
+                
+                <button onClick="topLeft()">topLeft</button>
+                <button onClick="topRight()">topRight</button>
+                <button onClick="botLeft()">botLeft</button>
+                <button onClick="botRight()">botRight</button>
             
             </div>
         
