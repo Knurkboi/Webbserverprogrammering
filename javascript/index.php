@@ -72,7 +72,7 @@
         
     </head>
 
-    <body id="body">
+    <body id="body" onLoad="updateValue()">
 
         <script>
 
@@ -142,16 +142,21 @@
                 x.style.backgroundColor = "red" 
             } 
         }
-            
-        var theValue = 0;
+           
+        var theValue = 0;   
             
         function increaseBy(amount) {
             theValue = theValue + amount;
-            updateValue()
+            updateValue();
         }    
             
         function updateValue() {
-        document.getElementById('value').innerHTML = "Value is: " + theValue;
+            document.getElementById('value').innerHTML = "Value is: " + theValue;
+        }      
+            
+        function resetValue() {
+            theValue = 0;
+            updateValue();
         }    
             
         </script>
@@ -196,9 +201,10 @@
             
                 <div id='value'></div>
                 
-                <button onClick='increaseBy(1)'>+1</button>
-                <button onClick='increaseBy(10)'>+10</button>
-                <button onClick='increaseBy(100)'>+100</button>
+                <button onClick="increaseBy(1)">+1</button>
+                <button onClick="increaseBy(10)">+10</button>
+                <button onClick="increaseBy(100)">+100</button>
+                <button onClick="resetValue()">Reset</button>
             
             </div>
         
