@@ -61,6 +61,13 @@
                 padding: 10px 10px;
             }
             
+            #uppgift7 {
+                display: block;
+                margin-left: 5px;
+                border: 1px solid black;
+                padding: 10px 10px;
+            }
+            
         </style>
         
     </head>
@@ -87,7 +94,8 @@
             var x = document.getElementById("oof");
             if (x.style.display === "none") {
                 x.style.display = "inline";
-            } else {
+            } 
+            else {
                 x.style.display = "none";
             }
         }
@@ -106,7 +114,8 @@
             var x = document.getElementById("text");
             if (x.style.display === "none") {
                 x.style.display = "block";
-            } else {
+            } 
+            else {
                 x.style.display = "none";
             }
         }    
@@ -115,15 +124,36 @@
             var x = document.getElementById("content");
             if (x.style.display === "block") {
                 x.style.display = "none";
-            } else {
+            } 
+            else {
                 x.style.display = "block";
             }
         }   
             
         function uppgift6() {
+            var x = document.getElementById("uppgift6");
+            if(x.style.backgroundColor === "red") {
+                x.style.backgroundColor = "green" 
+            }
+            else if(x.style.backgroundColor === "green") {
+                x.style.backgroundColor = "blue" 
+            }
+            else if(x.style.backgroundColor === "blue") {
+                x.style.backgroundColor = "red" 
+            } 
+        }
             
+        var theValue = 0;
+            
+        function increaseBy(amount) {
+            theValue = theValue + amount;
+            updateValue()
         }    
-
+            
+        function updateValue() {
+        document.getElementById('value').innerHTML = "Value is: " + theValue;
+        }    
+            
         </script>
 
         <div id="text"><h1>STOR ENAK LITEN beniz</h1></div>
@@ -156,15 +186,25 @@
 
             </div>
             
-            <div id="uppgift6">
+            <div id="uppgift6" style="background-color: red;">
             
-                <button id="btn6" type="button" onclick="uppgift6">Uppgift 6</button>
+                <button id="btn6" type="button" onclick="uppgift6()">Uppgift 6</button>
                 
+            </div>
+            
+            <div id="uppgift7">
+            
+                <div id='value'></div>
+                
+                <button onClick='increaseBy(1)'>+1</button>
+                <button onClick='increaseBy(10)'>+10</button>
+                <button onClick='increaseBy(100)'>+100</button>
+            
             </div>
         
         </div>
         
-        <button id="toggleBtnUppgift5" type="button" onclick="uppgift5()">Uppgift5</button>
+        <button id="toggleBtnUppgift5" type="button" onclick="uppgift5()">Uppgift 5</button>
 
     </body>
 
