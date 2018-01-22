@@ -80,6 +80,7 @@
                 border: 1px solid black;
                 width: 200px;
                 height: 200px;
+                position: absolute;
             }
             
         </style>
@@ -175,30 +176,34 @@
             
         function topLeft() {
             var x = document.getElementById("uppgift8");
-            x.style.position = "absolute";
             x.style.left = "0";
             x.style.top = "0";
+            x.style.bottom = "";
+            x.style.right = "";
         }    
             
         function topRight() {
             var x = document.getElementById("uppgift8");
-            x.style.position = "absolute";
             x.style.right = "0";
             x.style.top = "0";
+            x.style.left = "";
+            x.style.bottom = "";
         }
             
-        function topLeft() {
+        function botLeft() {
             var x = document.getElementById("uppgift8");
-            x.style.position = "absolute";
             x.style.left = "0";
             x.style.bottom = "0";
+            x.style.right = "";
+            x.style.top = "";
         }
             
-        function topLeft() {
+        function botRight() {
             var x = document.getElementById("uppgift8");
-            x.style.position = "absolute";
             x.style.right = "0";
             x.style.bottom = "0";
+            x.style.top = "";
+            x.style.left = "";
         }    
             
         </script>
